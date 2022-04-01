@@ -3,5 +3,9 @@ img {
 }
 
 body {
-  font-family: Arial Narrow, Arial, sans-serif;
+  font-family: Arial, Verdana, sans-serif;
+}
+
+h1 {
+  font-family: "Arial Narrow", Arial, sans-serif;
 }
