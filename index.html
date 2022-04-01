@@ -1,0 +1,37 @@
+<DOCTYPE html>
+<html lang="en-ca">
+  <head>
+    <!-- Metadata -->
+    <meta charset="utf-8">
+    <meta name="description" content="Calculating dollar conversion with user input">
+    <meta name="keywords" content="immaculata, ics2o">
+    <meta name="author" content="MariaG">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Code for the favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Maria's Second Assignment - Converting Canadian dollars to USD</title>
+  </head>
+  <body>
+    <script src="./js/script.js"></script>
+    <h1>Converting between Canadian and US Dollars with User Input</h1>
+    <h3>General Formulas:</h3>
+    <img src="./images/formulas.png" alt="Formulas">
+    <h2>Converting from CAD to USD</h2>
+    <p>You live in Canada, and you want to travel to the United States!</p>
+    <h3>Your Input:</h3>
+    <p>Please enter the amount of money you have budgeted for your trip below, as well as how long you want it to last!</p>
+    <!-- Form for user input -->
+    <form action="javascript:enterClicked()">
+      <label for="Amount of money in CAD">How much money have you budgeted for the trip? (In Canadian dollars)</label>
+      <input type="number" id="money-cad" placeholder="Your money..."><br><br>
+      <label for="rate">How many days will you be staying in the United States?</label>
+      <input type="number" id="days-in-us" placeholder="Number of days..."><br><br>
+      <input type="submit" value="Calculate">
+    </form>
+  </body>
+</html>
