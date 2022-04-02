@@ -12,32 +12,73 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
     <link rel="manifest" href="./favicon/site.webmanifest">
+    <!-- Code for Google's MDL -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-light_blue.min.css"/>
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="./css/style.css">
     <title>Maria's Second Assignment - Converting Canadian dollars to USD</title>
   </head>
   <body>
+    <!-- More code for Google's MDL -->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <!-- Link to Javascript file -->
     <script src="./js/script.js"></script>
-    <h1>Converting between Canadian and US Dollars with User Input</h1>
-    <h3>General Formulas:</h3>
-    <img src="./images/formulas.png" alt="Formulas">
-    <h2>Converting from CAD to USD</h2>
-    <p>If you live in Canada, and you want to travel to the United States, how much is your money worth? Use the tool below to calculate the value of your money in USD and how long you want it to last.</p>
-    <h3>Your Input:</h3>
-    <p>Please enter the amount of money you have budgeted for your trip below, as well as how long you want it to last!</p>
-    <!-- Form for user input -->
-    <form action="javascript:enterClicked()">
-      <label for="Amount of money in CAD">How much money have you budgeted for the trip? (In Canadian dollars)</label>
-      <input type="number" id="money-cad" placeholder="Your money..."><br><br>
-      <label for="days">How many days will you be staying in the United States?</label>
-      <input type="number" id="days-in-us" placeholder="Number of days..."><br><br>
-      <input type="submit" value="Calculate">
-    </form>
-    <h3>Results of the Calculations:</h3>
-    <!-- Div for results -->
-    <div id="results">
+    <!-- Website header using MDL -->
+    <div class="mdl-layout mdl-js-layout">
+      <header class="mdl-layout__header mdl-layout__header--scroll">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Converting between Canadian and US Dollars with User Input</span>
+        </div>
+      </header>
+      <!-- Div for style -->
+      <div id="grey">
+        <h3>General Formulas:</h3>
+        <center><img src="./images/formulas.png" alt="Formulas"></center>
+      </div>
+      <!-- Another coloured div -->
+      <div id="blue">
+        <h3>Converting from CAD to USD</h3>
+        <p>If you live in Canada, and you want to travel to the United States, how much is your money worth? Use the tool below to calculate the value of your money in USD and how long you want it to last.</p>
+        <h4>Your Input:</h4>
+        <p>Please enter the amount of money you have budgeted for your trip below, as well as how long you want it to last!</p>
+        <!-- Form in MDL with numeric textfields -->
+        <form action="javascript:enterClicked()">
+          <label for="Amount of money in CAD">How much money have you budgeted for the trip? (In Canadian dollars)</label><br>
+          <!-- First MDL textfield -->
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="money-cad">
+            <label class="mdl-textfield__label" for="Amount-money-cad">Your money...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+          <br>
+          <label for="days">How many days will you be staying in the United States?</label><br>
+          <!-- Second MDL textfield -->
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="days-in-us">
+            <label class="mdl-textfield__label" for="days">Number of days...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+          <br>
+          <!-- Submit button -->
+          <input type="submit" value="Calculate">
+        </form>
+      </div>
+      <!-- Yellow div for style -->
+      <div id="yellow">
+        <h4>Results of the Calculations:</h4>
+        <!-- Div for results -->
+        <div id="results">
+        </div>
+      </div>
+      <!-- Red div for style -->
+      <div id="red">
+        <h3>Converting from USD to CAD</h3>
+        <p>Click the button below to visit my second web page that will convert from USD to CAD. Alternatively, click <a href="https://assign-02-php-calculations.mariagoemans1.repl.co/">this link</a>.</p>
+        <br>
+        <!-- Setting button to work like a link - line of code copied from https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html -->
+        <button onclick="window.location.href='https://assign-02-php-calculations.mariagoemans1.repl.co/';">Click here!</button>
+      </div>
     </div>
-    <h2>Converting from USD to CAD</h2>
-    <p>Visit <a href="https://assign-02-php-calculations.mariagoemans1.repl.co/">this second web page</a> to convert USD to CAD.</p>
   </body>
 </html>
