@@ -1,3 +1,9 @@
+/* Created by: MariaG
+* Created on: April 1, 2022
+* This CSS file defines the style for index.html
+* ICS2O-Assign-02-HTML-Calculations
+*/
+
 img {
   width: 60%;
 }
@@ -54,7 +60,6 @@ h4 {
 
 button {
   width: 30%;
-  background-color: #19609d;
   color: white;
   border: none;
   padding: 10px;
